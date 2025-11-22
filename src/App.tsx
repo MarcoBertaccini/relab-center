@@ -20,16 +20,34 @@ function App() {
     window.scrollTo(0, 0);
 
     const titles: Record<string, string> = {
-      home: 'RELAB Center – Fisioterapia e Movimento',
-      fisioterapia: 'Fisioterapia – RELAB Center',
+      home: 'RELAB Center – Fisioterapia e Movimento a Forlì',
+      fisioterapia: 'Fisioterapia – RELAB Center Forlì',
       eti: 'Esercizio Terapeutico Individualizzato – RELAB Center',
-      palestra: 'Palestra & Corsi di Gruppo – RELAB Center',
-      performance: 'RELAB Performance – Preparazione Atletica',
-      nutrizione: 'Nutrizione – RELAB Center',
+      palestra: 'Palestra & Corsi di Gruppo – RELAB Center Forlì',
+      performance: 'RELAB Performance – Preparazione Atletica e Biomeccanica',
+      nutrizione: 'Nutrizione – RELAB Center Forlì',
       contatti: 'Contatti – RELAB Center'
     };
 
-    document.title = titles[currentPage] || 'RELAB Center – Fisioterapia e Movimento';
+    const descriptions: Record<string, string> = {
+      home: 'RELAB Center: fisioterapia, esercizio terapeutico, corsi di gruppo, nutrizione e performance a Forlì. Professionisti al servizio del tuo benessere.',
+      fisioterapia: 'Trattamenti di fisioterapia professionale a Forlì: valutazione, dolore, mobilità, recupero funzionale e prevenzione.',
+      eti: 'Percorso ETI in palestra a Forlì: esercizi mirati, recupero forza, mobilità e prevenzione recidive.',
+      palestra: 'Corsi di gruppo: posturale, yoga, pilates, allenamento funzionale. Allenati in un ambiente controllato e guidato da professionisti.',
+      performance: 'Preparazione atletica, biomeccanica, rientro post-infortunio e personal training guidati da Alessandro Malaguti, ex pro ciclista e Maglia Rosa.',
+      nutrizione: 'Consulenze nutrizionali personalizzate: valutazione, piani alimentari su misura ed educazione alimentare.',
+      contatti: 'Contatta RELAB Center: informazioni, prenotazioni, orari e indirizzo in Via Ferdinando Magellano 11, Forlì.'
+    };
+
+    document.title = titles[currentPage] || 'RELAB Center – Fisioterapia e Movimento a Forlì';
+
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', descriptions[currentPage] || descriptions.home);
   }, [currentPage]);
 
   const renderPage = () => {
