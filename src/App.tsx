@@ -18,6 +18,18 @@ function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const titles: Record<string, string> = {
+      home: 'RELAB Center – Fisioterapia e Movimento',
+      fisioterapia: 'Fisioterapia – RELAB Center',
+      eti: 'Esercizio Terapeutico Individualizzato – RELAB Center',
+      palestra: 'Palestra & Corsi di Gruppo – RELAB Center',
+      performance: 'RELAB Performance – Preparazione Atletica',
+      nutrizione: 'Nutrizione – RELAB Center',
+      contatti: 'Contatti – RELAB Center'
+    };
+
+    document.title = titles[currentPage] || 'RELAB Center – Fisioterapia e Movimento';
   }, [currentPage]);
 
   const renderPage = () => {
