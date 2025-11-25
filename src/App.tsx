@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,37 +10,41 @@ import Nutrizione from './pages/Nutrizione';
 import Performance from './pages/Performance';
 import Contatti from './pages/Contatti';
 
-interface PageProps {
-  onNavigate: (page: string) => void;
-}
-
-function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+function ScrollToTop() {
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, [location.pathname]);
 
+  return null;
+}
+
+function MetaTags() {
+  const location = useLocation();
+
+  useEffect(() => {
     const titles: Record<string, string> = {
-      home: 'RELAB Center – Fisioterapia e Movimento a Forlì',
-      fisioterapia: 'Fisioterapia – RELAB Center Forlì',
-      chinesiologia: 'Chinesiologia – RELAB Center Forlì',
-      palestra: 'Palestra & Corsi di Gruppo – RELAB Center Forlì',
-      performance: 'RELAB Performance – Preparazione Atletica e Biomeccanica',
-      nutrizione: 'Nutrizione – RELAB Center Forlì',
-      contatti: 'Contatti – RELAB Center'
+      '/': 'RELAB Center – Fisioterapia e Movimento a Forlì',
+      '/fisioterapia': 'Fisioterapia – RELAB Center Forlì',
+      '/chinesiologia': 'Chinesiologia – RELAB Center Forlì',
+      '/palestra': 'Palestra & Corsi di Gruppo – RELAB Center Forlì',
+      '/performance': 'RELAB Performance – Preparazione Atletica e Biomeccanica',
+      '/nutrizione': 'Nutrizione – RELAB Center Forlì',
+      '/contatti': 'Contatti – RELAB Center'
     };
 
     const descriptions: Record<string, string> = {
-      home: 'RELAB Center: fisioterapia, esercizio terapeutico, corsi di gruppo, nutrizione e performance a Forlì. Professionisti al servizio del tuo benessere.',
-      fisioterapia: 'Trattamenti di fisioterapia professionale a Forlì: valutazione, dolore, mobilità, recupero funzionale e prevenzione.',
-      chinesiologia: 'Chinesiologia a Forlì: valutazione funzionale, rieducazione posturale, prevenzione e potenziamento per migliorare movimento e performance.',
-      palestra: 'Corsi di gruppo: posturale, yoga, pilates, allenamento funzionale. Allenati in un ambiente controllato e guidato da professionisti.',
-      performance: 'Preparazione atletica, biomeccanica, rientro post-infortunio e personal training guidati da Alessandro Malaguti, ex pro ciclista e Maglia Rosa.',
-      nutrizione: 'Consulenze nutrizionali personalizzate: valutazione, piani alimentari su misura ed educazione alimentare.',
-      contatti: 'Contatta RELAB Center: informazioni, prenotazioni, orari e indirizzo in Via Ferdinando Magellano 11, Forlì.'
+      '/': 'RELAB Center: fisioterapia, esercizio terapeutico, corsi di gruppo, nutrizione e performance a Forlì. Professionisti al servizio del tuo benessere.',
+      '/fisioterapia': 'Trattamenti di fisioterapia professionale a Forlì: valutazione, dolore, mobilità, recupero funzionale e prevenzione.',
+      '/chinesiologia': 'Chinesiologia a Forlì: valutazione funzionale, rieducazione posturale, prevenzione e potenziamento per migliorare movimento e performance.',
+      '/palestra': 'Corsi di gruppo: posturale, yoga, pilates, allenamento funzionale. Allenati in un ambiente controllato e guidato da professionisti.',
+      '/performance': 'Preparazione atletica, biomeccanica, rientro post-infortunio e personal training guidati da Alessandro Malaguti, ex pro ciclista e Maglia Rosa.',
+      '/nutrizione': 'Consulenze nutrizionali personalizzate: valutazione, piani alimentari su misura ed educazione alimentare.',
+      '/contatti': 'Contatta RELAB Center: informazioni, prenotazioni, orari e indirizzo in Via Ferdinando Magellano 11, Forlì.'
     };
 
-    document.title = titles[currentPage] || 'RELAB Center – Fisioterapia e Movimento a Forlì';
+    document.title = titles[location.pathname] || 'RELAB Center – Fisioterapia e Movimento a Forlì';
 
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -47,36 +52,39 @@ function App() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', descriptions[currentPage] || descriptions.home);
-  }, [currentPage]);
+    metaDescription.setAttribute('content', descriptions[location.pathname] || descriptions['/']);
+  }, [location.pathname]);
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <Home onNavigate={setCurrentPage} />;
-      case 'fisioterapia':
-        return <Fisioterapia onNavigate={setCurrentPage} />;
-      case 'chinesiologia':
-        return <Chinesiologia onNavigate={setCurrentPage} />;
-      case 'palestra':
-        return <Palestra onNavigate={setCurrentPage} />;
-      case 'nutrizione':
-        return <Nutrizione onNavigate={setCurrentPage} />;
-      case 'performance':
-        return <Performance />;
-      case 'contatti':
-        return <Contatti />;
-      default:
-        return <Home onNavigate={setCurrentPage} />;
-    }
-  };
+  return null;
+}
 
+function AppContent() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header currentPage={currentPage} onNavigate={setCurrentPage} />
-      <main key={currentPage} className="page-transition">{renderPage()}</main>
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <ScrollToTop />
+      <MetaTags />
+      <Header />
+      <main className="page-transition overflow-x-hidden">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/fisioterapia" element={<Fisioterapia />} />
+          <Route path="/chinesiologia" element={<Chinesiologia />} />
+          <Route path="/palestra" element={<Palestra />} />
+          <Route path="/nutrizione" element={<Nutrizione />} />
+          <Route path="/performance" element={<Performance />} />
+          <Route path="/contatti" element={<Contatti />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 }
 

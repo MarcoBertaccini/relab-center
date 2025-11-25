@@ -1,10 +1,7 @@
 import { Activity, CheckCircle2, ArrowRight, Users, Target, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface ChinesiologiaProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
+export default function Chinesiologia() {
   return (
     <div className="min-h-screen">
      <section className="bg-gradient-to-br from-relab-teal to-relab-blue text-white py-20">
@@ -17,11 +14,9 @@ export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
           <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
             Valutazione personalizzata, prevenzione, rieducazione e potenziamento per migliorare movimento, postura e performance.
           </p>
-          <a
-            href="/contatti#contatti-diretti"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contatti');
+          <Link
+            to="/contatti"
+            onClick={() => {
               setTimeout(() => {
                 document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
@@ -30,7 +25,7 @@ export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
           >
             Prenota una valutazione
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -182,11 +177,9 @@ export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
       <section className="py-16 bg-gradient-to-br from-[#00A8E8] to-[#003F63] text-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Prenota ora la tua valutazione di chinesiologia</h2>
-          <a
-            href="/contatti#contatti-diretti"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contatti');
+          <Link
+            to="/contatti"
+            onClick={() => {
               setTimeout(() => {
                 document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
@@ -195,7 +188,7 @@ export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
           >
             Contattaci
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

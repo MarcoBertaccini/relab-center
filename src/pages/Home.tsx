@@ -1,21 +1,26 @@
 import { Activity, Heart, Users, Dumbbell, ArrowRight, CheckCircle2, Star, Apple, TrendingUp } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
-interface HomeProps {
-  onNavigate: (page: string) => void;
-}
+export default function Home() {
+  const navigate = useNavigate();
 
-export default function Home({ onNavigate }: HomeProps) {
+  const handleNavigateWithScroll = (path: string, sectionId: string) => {
+    navigate(path);
+    setTimeout(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
 <section
   className="relative text-white py-20 lg:py-32 bg-gradient-to-br from-relab-teal to-relab-blue"
 >
-  {/* Logo RELAB piccolo sopra al testo */}
-  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20">
+  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20 max-w-full px-4">
     <img
       src="/Background_home.webp"
       alt="Relab Logo"
-      className="w-[500px] h-[520px]opacity-100" 
+      className="w-full max-w-[500px] h-auto opacity-100 object-contain"
     />
   </div>
 
@@ -28,11 +33,9 @@ export default function Home({ onNavigate }: HomeProps) {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
-          href="/contatti#contatti-diretti"
-          onClick={(e) => {
-            e.preventDefault();
-            onNavigate('contatti');
+        <Link
+          to="/contatti"
+          onClick={() => {
             setTimeout(() => {
               document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
             }, 100);
@@ -41,7 +44,7 @@ export default function Home({ onNavigate }: HomeProps) {
         >
           Prenota un appuntamento
           <ArrowRight className="w-5 h-5" />
-        </a>
+        </Link>
 
         <button
           onClick={() => {
@@ -62,7 +65,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-6">Chi Siamo</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-             In Relab Center integriamo fisioterapia e movimento consapevole per accompagnare ogni persona — dall’atleta al paziente di ogni età — verso un recupero efficace e una migliore qualità di vita. Nel nostro spazio costruiamo percorsi personalizzati per raggiungere obiettivi reali e duraturi.
+             In Relab Center integriamo fisioterapia e movimento consapevole per accompagnare ogni persona — dall'atleta al paziente di ogni età — verso un recupero efficace e una migliore qualità di vita. Nel nostro spazio costruiamo percorsi personalizzati per raggiungere obiettivi reali e duraturi.
             </p>
           </div>
         </div>
@@ -78,9 +81,9 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div
+            <Link
+              to="/fisioterapia"
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-relab-teal border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('fisioterapia')}
             >
               <div className="w-16 h-16 bg-relab-teal/10 rounded-relab flex items-center justify-center mb-6">
                 <Activity className="w-8 h-8 text-relab-teal" />
@@ -96,11 +99,11 @@ export default function Home({ onNavigate }: HomeProps) {
                   <span>Terapie manuali, strumentali ed esercizio attivo</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div
+            <Link
+              to="/chinesiologia"
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-relab-teal border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('chinesiologia')}
             >
               <div className="w-16 h-16 bg-relab-blue/10 rounded-relab flex items-center justify-center mb-6">
                 <Heart className="w-8 h-8 text-relab-blue" />
@@ -117,11 +120,11 @@ export default function Home({ onNavigate }: HomeProps) {
                   <span>Prevenzione e potenziamento personalizzato</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div
+            <Link
+              to="/palestra"
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-relab-teal border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('palestra')}
             >
               <div className="w-16 h-16 bg-relab-teal/10 rounded-relab flex items-center justify-center mb-6">
                 <Dumbbell className="w-8 h-8 text-relab-teal" />
@@ -137,7 +140,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <span>Mantenimento, miglioramento performance e prevenzione</span>
                 </li>
               </ul>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -160,15 +163,7 @@ export default function Home({ onNavigate }: HomeProps) {
                 Programmi individuali e di gruppo, seguiti da fisioterapisti e trainer qualificati. Perfetta per mantenimento, ritorno allo sport e potenziamento.
               </p>
               <button
-                onClick={() => {
-                  onNavigate('palestra');
-                  setTimeout(() => {
-                    const section = document.querySelector('[id="i-nostri-corsi"]');
-                    if (section) {
-                      section.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }, 100);
-                }}
+                onClick={() => handleNavigateWithScroll('/palestra', 'i-nostri-corsi')}
                 className="bg-relab-teal text-white px-8 py-4 rounded-relab font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all inline-flex items-center gap-2"
               >
                 Vedi i Corsi
@@ -186,9 +181,9 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div
+            <Link
+              to="/performance"
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-relab-teal border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('performance')}
             >
               <div className="w-16 h-16 bg-relab-blue/10 rounded-relab flex items-center justify-center mb-6">
                 <TrendingUp className="w-8 h-8 text-relab-blue" />
@@ -204,11 +199,11 @@ export default function Home({ onNavigate }: HomeProps) {
                   <span>Personal training e ricondizionamento post infortunio</span>
                 </li>
               </ul>
-            </div>
+            </Link>
 
-            <div
+            <Link
+              to="/nutrizione"
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-green-600 border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('nutrizione')}
             >
               <div className="w-16 h-16 bg-green-50 rounded-relab flex items-center justify-center mb-6">
                 <Apple className="w-8 h-8 text-green-600" />
@@ -224,7 +219,7 @@ export default function Home({ onNavigate }: HomeProps) {
                   <span>Supporto nutrizionale integrato con il movimento</span>
                 </li>
               </ul>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -285,11 +280,9 @@ export default function Home({ onNavigate }: HomeProps) {
           <p className="text-xl mb-10 text-white/90 max-w-2xl mx-auto">
             Fisioterapisti, trainer e nutrizionista lavorano insieme per costruire il tuo percorso
           </p>
-          <a
-            href="/contatti#contatti-diretti"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contatti');
+          <Link
+            to="/contatti"
+            onClick={() => {
               setTimeout(() => {
                 document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
@@ -298,7 +291,7 @@ export default function Home({ onNavigate }: HomeProps) {
           >
             Contattaci
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

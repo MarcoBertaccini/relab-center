@@ -1,10 +1,7 @@
 import { Apple, ClipboardList, FileText, GraduationCap, Zap, RefreshCw, Target, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface NutrizioneProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Nutrizione({ onNavigate }: NutrizioneProps) {
+export default function Nutrizione() {
   return (
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-relab-blue to-relab-teal text-white py-20">
@@ -145,11 +142,9 @@ export default function Nutrizione({ onNavigate }: NutrizioneProps) {
       <section className="py-16 bg-gradient-to-br from-relab-blue to-relab-teal text-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Prenota la tua consulenza nutrizionale</h2>
-          <a
-            href="/contatti#contatti-diretti"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contatti');
+          <Link
+            to="/contatti"
+            onClick={() => {
               setTimeout(() => {
                 document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
@@ -158,7 +153,7 @@ export default function Nutrizione({ onNavigate }: NutrizioneProps) {
           >
             Contattaci
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>

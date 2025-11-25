@@ -1,10 +1,7 @@
 import { Dumbbell, Users, Calendar, Activity, Heart, TrendingUp, ArrowRight, BookOpen, CheckCircle2, Wind, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface PalestraProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Palestra({ onNavigate }: PalestraProps) {
+export default function Palestra() {
   return (
     <div className="min-h-screen">
       <section className="bg-gradient-to-br from-relab-teal to-relab-blue text-white py-20">
@@ -209,11 +206,9 @@ export default function Palestra({ onNavigate }: PalestraProps) {
 
             <div className="mt-8 text-center">
               <p className="text-gray-600 text-lg mb-6">I posti sono limitati. Prenota in anticipo il tuo corso.</p>
-              <a
-                href="/contatti#contatti-diretti"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate('contatti');
+              <Link
+                to="/contatti"
+                onClick={() => {
                   setTimeout(() => {
                     document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
                   }, 100);
@@ -222,7 +217,7 @@ export default function Palestra({ onNavigate }: PalestraProps) {
               >
                 Richiedi disponibilità
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -254,11 +249,9 @@ export default function Palestra({ onNavigate }: PalestraProps) {
       <section className="py-16 bg-gradient-to-br from-relab-blue to-relab-teal text-white">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Vuoi iscriverti a un corso o provarne uno?</h2>
-          <a
-            href="/contatti#contatti-diretti"
-            onClick={(e) => {
-              e.preventDefault();
-              onNavigate('contatti');
+          <Link
+            to="/contatti"
+            onClick={() => {
               setTimeout(() => {
                 document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
               }, 100);
@@ -267,7 +260,7 @@ export default function Palestra({ onNavigate }: PalestraProps) {
           >
             Contattaci ora
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
