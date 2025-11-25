@@ -13,7 +13,7 @@ export default function Home({ onNavigate }: HomeProps) {
   {/* Logo RELAB piccolo sopra al testo */}
   <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20">
     <img
-      src="/Background_home.png"
+      src="/Background_home.webp"
       alt="Relab Logo"
       className="w-[500px] h-[520px]opacity-100" 
     />
