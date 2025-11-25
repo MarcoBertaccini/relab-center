@@ -8,11 +8,7 @@ export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
 <section
-  className="relative text-white py-20 lg:py-32"
-  style={{
-    backgroundColor: 'bg-gradient-to-br from-relab-teal to-relab-blue text-white py-20'
-
-  }}
+  className="relative text-white py-20 lg:py-32 bg-gradient-to-br from-relab-teal to-relab-blue"
 >
   {/* Logo RELAB piccolo sopra al testo */}
   <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20">
