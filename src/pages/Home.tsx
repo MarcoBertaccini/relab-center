@@ -7,11 +7,8 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
-      <section className="relative bg-gradient-to-br from-relab-blue via-relab-blue to-relab-teal text-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-relab-teal rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{ backgroundImage: 'url(/Background_home.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-relab-blue/30"></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
