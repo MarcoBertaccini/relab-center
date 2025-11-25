@@ -70,7 +70,7 @@ export default function Home({ onNavigate }: HomeProps) {
       <section id="nostro-percorso" className="py-20 bg-relab-gray">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-4">Il Nostro Percorso</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-4">Il nostro Percorso</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Un approccio integrato in tre fasi
             </p>
