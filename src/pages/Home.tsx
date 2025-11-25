@@ -7,8 +7,14 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
-      <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{ backgroundImage: 'url(/Background_home.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="absolute inset-0 bg-relab-blue/30"></div>
+      <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{ backgroundColor: '#C7D5DD' }}>
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'url(/Background_home.png)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center top',
+          backgroundSize: 'contain',
+          opacity: 0.15
+        }}></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
