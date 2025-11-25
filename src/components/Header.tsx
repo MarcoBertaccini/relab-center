@@ -12,7 +12,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   const menuItems = [
     { name: 'Home', id: 'home' },
     { name: 'Fisioterapia', id: 'fisioterapia' },
-    { name: 'ETI', id: 'eti' },
+    { name: 'Chinesiologia', id: 'eti' },
     { name: 'Corsi & Palestra', id: 'palestra' },
     { name: 'Performance', id: 'performance' },
     { name: 'Nutrizione', id: 'nutrizione' },
