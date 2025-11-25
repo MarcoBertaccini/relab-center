@@ -28,7 +28,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('home')}
           >
             <img
-              src="/Logo_Relab.jpg"
+              src="/Logo_Relab.webp"
               alt="RELAB Center"
               className="h-20 w-auto object-contain my-auto"
             />
