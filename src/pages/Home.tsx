@@ -42,7 +42,7 @@ export default function Home({ onNavigate }: HomeProps) {
           }}
           className="bg-white text-relab-blue px-8 py-4 rounded-relab font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
         >
-          Prenota una valutazione
+          Prenota un appuntamento
           <ArrowRight className="w-5 h-5" />
         </a>
 
