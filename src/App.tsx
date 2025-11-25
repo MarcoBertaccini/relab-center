@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Fisioterapia from './pages/Fisioterapia';
-import ETI from './pages/ETI';
+import Chinesiologia from './pages/Chinesiologia';
 import Palestra from './pages/Palestra';
 import Nutrizione from './pages/Nutrizione';
 import Performance from './pages/Performance';
@@ -22,7 +22,7 @@ function App() {
     const titles: Record<string, string> = {
       home: 'RELAB Center – Fisioterapia e Movimento a Forlì',
       fisioterapia: 'Fisioterapia – RELAB Center Forlì',
-      eti: 'Esercizio Terapeutico Individualizzato – RELAB Center',
+      chinesiologia: 'Chinesiologia – RELAB Center Forlì',
       palestra: 'Palestra & Corsi di Gruppo – RELAB Center Forlì',
       performance: 'RELAB Performance – Preparazione Atletica e Biomeccanica',
       nutrizione: 'Nutrizione – RELAB Center Forlì',
@@ -32,7 +32,7 @@ function App() {
     const descriptions: Record<string, string> = {
       home: 'RELAB Center: fisioterapia, esercizio terapeutico, corsi di gruppo, nutrizione e performance a Forlì. Professionisti al servizio del tuo benessere.',
       fisioterapia: 'Trattamenti di fisioterapia professionale a Forlì: valutazione, dolore, mobilità, recupero funzionale e prevenzione.',
-      eti: 'Percorso ETI in palestra a Forlì: esercizi mirati, recupero forza, mobilità e prevenzione recidive.',
+      chinesiologia: 'Chinesiologia a Forlì: valutazione funzionale, rieducazione posturale, prevenzione e potenziamento per migliorare movimento e performance.',
       palestra: 'Corsi di gruppo: posturale, yoga, pilates, allenamento funzionale. Allenati in un ambiente controllato e guidato da professionisti.',
       performance: 'Preparazione atletica, biomeccanica, rientro post-infortunio e personal training guidati da Alessandro Malaguti, ex pro ciclista e Maglia Rosa.',
       nutrizione: 'Consulenze nutrizionali personalizzate: valutazione, piani alimentari su misura ed educazione alimentare.',
@@ -56,8 +56,8 @@ function App() {
         return <Home onNavigate={setCurrentPage} />;
       case 'fisioterapia':
         return <Fisioterapia onNavigate={setCurrentPage} />;
-      case 'eti':
-        return <ETI onNavigate={setCurrentPage} />;
+      case 'chinesiologia':
+        return <Chinesiologia onNavigate={setCurrentPage} />;
       case 'palestra':
         return <Palestra onNavigate={setCurrentPage} />;
       case 'nutrizione':

@@ -100,21 +100,21 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div
               className="bg-white p-8 rounded-relab-lg shadow-md hover:shadow-xl hover:border-2 hover:border-relab-teal border-2 border-transparent transition-all cursor-pointer"
-              onClick={() => onNavigate('eti')}
+              onClick={() => onNavigate('chinesiologia')}
             >
               <div className="w-16 h-16 bg-relab-blue/10 rounded-relab flex items-center justify-center mb-6">
                 <Heart className="w-8 h-8 text-relab-blue" />
               </div>
-              <h3 className="text-2xl font-bold text-relab-blue mb-4">2. ETI</h3>
-              <p className="text-sm text-gray-500 mb-3">Esercizio Terapeutico Individualizzato</p>
+              <h3 className="text-2xl font-bold text-relab-blue mb-4">2. Chinesiologia</h3>
+              <p className="text-sm text-gray-500 mb-3">La scienza del movimento</p>
               <ul className="space-y-2 text-gray-600 leading-relaxed">
                 <li className="flex items-start gap-2">
                   <span className="text-relab-blue mt-1">•</span>
-                  <span>Lavoro in palestra mirato su forza, mobilità, stabilità</span>
+                  <span>Valutazione funzionale e rieducazione posturale</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-relab-blue mt-1">•</span>
-                  <span>Ripristino funzionale e prevenzione recidive</span>
+                  <span>Prevenzione e potenziamento personalizzato</span>
                 </li>
               </ul>
             </div>
