@@ -7,7 +7,7 @@ interface ChinesiologiaProps {
 export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
   return (
     <div className="min-h-screen">
-      <section className="bg-[#003F63] text-white py-20">
+      <section className="relative text-white py-20 lg:py-32 bg-gradient-to-br from-relab-teal to-relab-blue"
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <Activity className="w-20 h-20 mx-auto mb-6" />
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">Chinesiologia</h1>
