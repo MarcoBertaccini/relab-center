@@ -125,7 +125,7 @@ export default function Home({ onNavigate }: HomeProps) {
               <div className="w-16 h-16 bg-relab-teal/10 rounded-relab flex items-center justify-center mb-6">
                 <Dumbbell className="w-8 h-8 text-relab-teal" />
               </div>
-              <h3 className="text-2xl font-bold text-relab-blue mb-4">3. Corsi & Palestra</h3>
+              <h3 className="text-2xl font-bold text-relab-blue mb-4">3. Corsi</h3>
               <ul className="space-y-2 text-gray-600 leading-relaxed">
                 <li className="flex items-start gap-2">
                   <span className="text-relab-teal mt-1">•</span>
