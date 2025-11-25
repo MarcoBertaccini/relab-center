@@ -9,12 +9,12 @@ export default function Home({ onNavigate }: HomeProps) {
     <div className="min-h-screen">
       <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{
         backgroundColor: '#C7D5DD',
-        backgroundImage: 'url(/Background_home copy.png)',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center top',
-        backgroundSize: 'cover'
+        backgroundImage: 'none',
+        backdropFilter: 'none',
+        filter: 'none',
+        opacity: 1,
+        mixBlendMode: 'normal'
       }}>
-        <div className="absolute inset-0"></div>
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
