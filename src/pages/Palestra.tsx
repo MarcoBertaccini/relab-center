@@ -156,9 +156,11 @@ export default function Palestra({ onNavigate }: PalestraProps) {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
-              <div className="bg-gradient-to-br from-relab-teal to-relab-blue rounded-relab-lg h-96 flex items-center justify-center text-white text-6xl font-bold shadow-xl">
-                IMG
-              </div>
+              <img
+                src="/25.jpg"
+                alt="Corsi di gruppo RELAB"
+                className="rounded-relab-lg h-96 w-full object-cover shadow-xl"
+              />
             </div>
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-6">
