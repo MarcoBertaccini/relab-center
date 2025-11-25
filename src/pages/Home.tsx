@@ -7,50 +7,58 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
-      <section
+<section
   className="relative text-white py-20 lg:py-32"
   style={{
-    backgroundColor: '#C7D5DD',
-    backgroundImage: "url('/Background_home.png')",
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center top',
-    backgroundSize: 'cover'
+    backgroundColor: '#C7D5DD'
   }}
 >
-  <div className="container mx-auto px-4 lg:px-8 relative z-10">
+  {/* Logo RELAB piccolo sopra al testo */}
+  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-20">
+    <img
+      src="/Background_home.png"
+      alt="Relab Logo"
+      className="w-64 opacity-30" 
+    />
+  </div>
+
+  <div className="container mx-auto px-4 lg:px-8 relative z-10 mt-24">
     <div className="max-w-4xl mx-auto text-center">
 
       <p className="text-xl lg:text-2xl mb-12 text-white/90 font-light">
         Un percorso completo:<br />
         Fisioterapia → Riabilitazione → Mantenimento
       </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contatti#contatti-diretti"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onNavigate('contatti');
-                  setTimeout(() => {
-                    document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 100);
-                }}
-                className="bg-white text-relab-blue px-8 py-4 rounded-relab font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
-              >
-                Prenota una valutazione
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <button
-                onClick={() => {
-                  document.getElementById('nostro-percorso')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="bg-relab-teal text-white px-8 py-4 rounded-relab font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all border-2 border-white/20"
-              >
-                Scopri i servizi
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contatti#contatti-diretti"
+          onClick={(e) => {
+            e.preventDefault();
+            onNavigate('contatti');
+            setTimeout(() => {
+              document.getElementById('contatti-diretti')?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }}
+          className="bg-white text-relab-blue px-8 py-4 rounded-relab font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+        >
+          Prenota una valutazione
+          <ArrowRight className="w-5 h-5" />
+        </a>
+
+        <button
+          onClick={() => {
+            document.getElementById('nostro-percorso')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="bg-relab-teal text-white px-8 py-4 rounded-relab font-bold text-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all border-2 border-white/20"
+        >
+          Scopri i servizi
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
