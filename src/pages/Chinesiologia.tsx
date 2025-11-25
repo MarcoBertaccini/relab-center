@@ -7,9 +7,9 @@ interface ChinesiologiaProps {
 export default function Chinesiologia({ onNavigate }: ChinesiologiaProps) {
   return (
     <div className="min-h-screen">
-      <section className="relative text-white py-20 lg:py-32 bg-gradient-to-br from-relab-teal to-relab-blue"
-        <div className="container mx-auto px-4 lg:px-8 text-center">
-          <Activity className="w-20 h-20 mx-auto mb-6" />
+     <section className="bg-gradient-to-br from-relab-teal to-relab-blue text-white py-20">
+  <div className="container mx-auto px-4 lg:px-8 text-center">
+    <Activity className="w-20 h-20 mx-auto mb-6" />
           <h1 className="text-5xl lg:text-6xl font-bold mb-6">Chinesiologia</h1>
           <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto mb-4">
             La scienza del movimento al servizio del tuo benessere.
