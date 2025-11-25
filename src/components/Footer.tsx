@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="inline-block mb-4">
               <img
-                src="/Logo_Relab.jpg"
+                src="/Logo_Relab.webp"
                 alt="RELAB Center"
                 className="h-32 w-auto object-contain mix-blend-multiply bg-white rounded-lg p-3"
               />
