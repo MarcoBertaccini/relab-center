@@ -9,7 +9,7 @@ export default function Footer() {
             <img
               src="/Logo_Relab.jpg"
               alt="RELAB Center"
-              className="h-20 w-auto mb-4 bg-white p-2 rounded"
+              className="h-32 w-auto mb-4 object-contain"
             />
             <p className="text-white/80 leading-relaxed">
               Centro specializzato in fisioterapia, esercizio terapeutico individualizzato e corsi di gruppo.
