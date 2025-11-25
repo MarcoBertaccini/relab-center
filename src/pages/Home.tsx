@@ -15,7 +15,7 @@ export default function Home({ onNavigate }: HomeProps) {
     <img
       src="/Background_home.png"
       alt="Relab Logo"
-      className="w-[500px] h-[520]opacity-100" 
+      className="w-[500px] h-[520px]opacity-100" 
     />
   </div>
 
