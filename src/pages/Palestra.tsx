@@ -74,7 +74,7 @@ export default function Palestra({ onNavigate }: PalestraProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section id="i-nostri-corsi" className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-4">I Nostri Corsi</h2>

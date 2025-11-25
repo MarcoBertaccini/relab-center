@@ -163,7 +163,18 @@ export default function Home({ onNavigate }: HomeProps) {
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Programmi individuali e di gruppo, seguiti da fisioterapisti e trainer qualificati. Perfetta per mantenimento, ritorno allo sport e potenziamento.
               </p>
-              <button className="bg-relab-teal text-white px-8 py-4 rounded-relab font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all inline-flex items-center gap-2">
+              <button
+                onClick={() => {
+                  onNavigate('palestra');
+                  setTimeout(() => {
+                    const section = document.querySelector('[id="i-nostri-corsi"]');
+                    if (section) {
+                      section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+                className="bg-relab-teal text-white px-8 py-4 rounded-relab font-bold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all inline-flex items-center gap-2"
+              >
                 Vedi i Corsi
                 <ArrowRight className="w-5 h-5" />
               </button>
