@@ -9,7 +9,7 @@ export default function Home({ onNavigate }: HomeProps) {
     <div className="min-h-screen">
       <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{ backgroundColor: '#C7D5DD' }}>
         <div className="absolute inset-0" style={{
-          backgroundImage: 'url(/Background_home.png)',
+          backgroundImage: 'url(/Background_home copy.png)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center top',
           backgroundSize: 'contain',
