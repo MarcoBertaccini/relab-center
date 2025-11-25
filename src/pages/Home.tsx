@@ -10,7 +10,7 @@ export default function Home({ onNavigate }: HomeProps) {
 <section
   className="relative text-white py-20 lg:py-32"
   style={{
-    backgroundColor: 'bg-gradient-to-br from-relab-teal to-relab-blue'
+    backgroundColor: 'linear-gradient(to bottom, #0097A7, #003F63)'
 
   }}
 >
