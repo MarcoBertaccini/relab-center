@@ -7,22 +7,23 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   return (
     <div className="min-h-screen">
-      <section className="relative text-white py-20 lg:py-32 overflow-hidden" style={{
-        backgroundColor: '#C7D5DD',
-        backgroundImage: 'none',
-        backdropFilter: 'none',
-        filter: 'none',
-        opacity: 1,
-        mixBlendMode: 'normal'
-      }}>
+      <section
+  className="relative text-white py-20 lg:py-32"
+  style={{
+    backgroundColor: '#C7D5DD',
+    backgroundImage: "url('/Background_home.png')",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center top',
+    backgroundSize: 'cover'
+  }}
+>
+  <div className="container mx-auto px-4 lg:px-8 relative z-10">
+    <div className="max-w-4xl mx-auto text-center">
 
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-          
-            <p className="text-xl lg:text-2xl mb-12 text-white/90 font-light">
-              Un percorso completo:<br />
-              Fisioterapia → Riabilitazione → Mantenimento
-            </p>
+      <p className="text-xl lg:text-2xl mb-12 text-white/90 font-light">
+        Un percorso completo:<br />
+        Fisioterapia → Riabilitazione → Mantenimento
+      </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contatti#contatti-diretti"
