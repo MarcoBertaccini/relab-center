@@ -10,7 +10,7 @@ export default function Palestra({ onNavigate }: PalestraProps) {
       <section className="bg-gradient-to-br from-relab-teal to-relab-blue text-white py-20">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <Dumbbell className="w-20 h-20 mx-auto mb-6" />
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6">Palestra & Corsi di Gruppo</h1>
+          <h1 className="text-5xl lg:text-6xl font-bold mb-6">Corsi di Gruppo</h1>
           <p className="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">
             Allenamento guidato, progressivo e sicuro
           </p>
