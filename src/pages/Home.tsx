@@ -10,7 +10,7 @@ export default function Home({ onNavigate }: HomeProps) {
 <section
   className="relative text-white py-20 lg:py-32"
   style={{
-    backgroundColor: '#C7D5DD'
+    backgroundColor: '#C7DCE3'
   }}
 >
   {/* Logo RELAB piccolo sopra al testo */}
