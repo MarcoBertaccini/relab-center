@@ -13,7 +13,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
     { name: 'Home', id: 'home' },
     { name: 'Fisioterapia', id: 'fisioterapia' },
     { name: 'Chinesiologia', id: 'eti' },
-    { name: 'Corsi & Palestra', id: 'palestra' },
+    { name: 'Corsi', id: 'palestra' },
     { name: 'Performance', id: 'performance' },
     { name: 'Nutrizione', id: 'nutrizione' },
     { name: 'Contatti', id: 'contatti' },
