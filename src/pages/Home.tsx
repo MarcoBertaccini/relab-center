@@ -15,9 +15,13 @@ export default function Home({ onNavigate }: HomeProps) {
 
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              Fisioterapia, Movimento e Benessere
-            </h1>
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/Background_home copy copy.png"
+                alt="Fisioterapia, Movimento e Benessere"
+                className="w-full max-w-4xl h-auto"
+              />
+            </div>
             <p className="text-xl lg:text-2xl mb-12 text-white/90 font-light">
               Un percorso completo:<br />
               Fisioterapia → Riabilitazione → Mantenimento
