@@ -61,7 +61,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-relab-blue mb-6">Chi Siamo</h2>
             <p className="text-xl text-gray-600 leading-relaxed">
-              RELAB Center è uno studio di professionisti dove fisioterapia, esercizio terapeutico e palestra si integrano in un percorso strutturato per migliorare mobilità, forza e qualità della vita.
+             In Relab Center integriamo fisioterapia e movimento consapevole per accompagnare ogni persona — dall’atleta al paziente di ogni età — verso un recupero efficace e una migliore qualità di vita. Nel nostro spazio costruiamo percorsi personalizzati per raggiungere obiettivi reali e duraturi.
             </p>
           </div>
         </div>
