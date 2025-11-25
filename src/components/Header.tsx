@@ -24,13 +24,13 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-24">
           <div
-            className="flex items-center justify-center cursor-pointer"
+            className="flex items-center cursor-pointer"
             onClick={() => onNavigate('home')}
           >
             <img
               src="/Logo_Relab.jpg"
               alt="RELAB Center"
-              className="h-20 w-auto object-contain"
+              className="h-20 w-auto object-contain my-auto"
             />
           </div>
 

@@ -6,11 +6,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <img
-              src="/Logo_Relab.jpg"
-              alt="RELAB Center"
-              className="h-32 w-auto mb-4 object-contain"
-            />
+            <div className="bg-white rounded-lg p-3 inline-block mb-4">
+              <img
+                src="/Logo_Relab.jpg"
+                alt="RELAB Center"
+                className="h-32 w-auto object-contain"
+              />
+            </div>
             <p className="text-white/80 leading-relaxed">
               Centro specializzato in fisioterapia, esercizio terapeutico individualizzato e corsi di gruppo.
             </p>
