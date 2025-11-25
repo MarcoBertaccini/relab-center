@@ -1,57 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<head>
+  <!-- Charset -->
+  <meta charset="UTF-8" />
 
-    <link rel="preload" href="/Background_home.webp" as="image" />
-    <meta charset="UTF-8" />
-   <!-- Favicon moderna -->
-<link rel="icon" type="image/webp" href="/Logo_Relab.webp" />
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Fallback totale -->
-<link rel="icon" type="image/png" href="/Logo_Relab.png" />
+  <!-- Primary SEO -->
+  <title>RELAB Center Wellness Site</title>
+  <meta name="description" content="RELAB Center: fisioterapia, esercizio terapeutico e servizi per il benessere a Forlì. Percorsi guidati da professionisti.">
 
-<!-- Per vecchi browser -->
-<link rel="shortcut icon" href="/favicon.ico" />
+  <!-- Preload hero background (performance) -->
+  <link rel="preload" href="/Background_home.webp" as="image" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RELAB Center Wellness Site</title>
-    <meta name="description" content="RELAB Center: fisioterapia, esercizio terapeutico e servizi per il benessere a Forlì. Percorsi guidati da professionisti.">
-    <meta property="og:title" content="RELAB Center – Fisioterapia e Movimento">
-    <meta property="og:description" content="Fisioterapia, ETI, Corsi di Gruppo, Performance e Nutrizione. Un centro professionale dedicato al tuo benessere.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://relab-center.it/">
-    <meta property="og:image" content="https://relab-center.it/Logo_Relab.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "RELAB Center",
-  "url": "https://relab-center.it",
-  "image": "https://relab-center.it/Logo_Relab.webp",
-  "description": "Centro specializzato in fisioterapia, esercizio terapeutico individualizzato, corsi di gruppo, nutrizione e servizi performance a Forlì.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Via Ferdinando Magellano, 11",
-    "addressLocality": "Forlì",
-    "postalCode": "47121",
-    "addressCountry": "IT"
-  },
-  "openingHours": [
-    "Mo 17:00-19:30",
-    "Tu 18:00-20:00",
-    "We 17:30-19:30",
-    "Th 18:00-20:00",
-    "Fr 17:30-20:00",
-    "Sa Closed",
-    "Su Closed"
-  ],
-  "telephone": "",
-  "priceRange": "$$"
-}
-    </script>
+  <!-- Nunito font -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" 
+    rel="stylesheet"
+  />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/webp" href="/Logo_Relab.webp" />
+  <link rel="icon" type="image/png" href="/Logo_Relab.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RELAB Center – Fisioterapia e Movimento">
+  <meta property="og:description" content="Fisioterapia, ETI, Corsi di Gruppo, Performance e Nutrizione. Un centro professionale dedicato al tuo benessere.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relab-center.it/">
+  <meta property="og:image" content="https://relab-center.it/Logo_Relab.webp">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "RELAB Center",
+    "url": "https://relab-center.it",
+    "image": "https://relab-center.it/Logo_Relab.webp",
+    "description": "Centro specializzato in fisioterapia, esercizio terapeutico individualizzato, corsi di gruppo, nutrizione e servizi performance a Forlì.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Ferdinando Magellano, 11",
+      "addressLocality": "Forlì",
+      "postalCode": "47121",
+      "addressCountry": "IT"
+    },
+    "openingHours": [
+      "Mo 17:00-19:30",
+      "Tu 18:00-20:00",
+      "We 17:30-19:30",
+      "Th 18:00-20:00",
+      "Fr 17:30-20:00",
+      "Sa Closed",
+      "Su Closed"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
 </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
