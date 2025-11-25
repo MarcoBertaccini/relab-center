@@ -15,7 +15,6 @@ export default function Home({ onNavigate }: HomeProps) {
             <div className="mb-6 flex justify-center">
               <img
                 src="/Background_home copy copy.png"
-                alt="Fisioterapia, Movimento e Benessere"
                 className="w-full max-w-4xl h-auto"
               />
             </div>
