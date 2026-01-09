@@ -68,7 +68,7 @@ export default function Contatti() {
                   <Mail className="w-8 h-8 text-relab-teal" />
                 </div>
                 <h3 className="text-2xl font-bold text-relab-blue mb-4">Email</h3>
-                <p className="text-gray-700 text-xl font-semibold mb-3">info@relabcenter.it</p>
+                <p className="text-gray-700 text-xl font-semibold mb-3">info@relab-center.it</p>
                 <p className="text-gray-600 leading-relaxed">
                   Rispondiamo rapidamente a tutte le richieste.
                 </p>
